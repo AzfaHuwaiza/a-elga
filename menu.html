@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Catering X</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header / Navbar -->
+    <nav class="bg-orange-600 fixed w-full z-20 top-0 start-0 border-b border-orange-300">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Catering X</span>
+        </a>
+        <div class="flex md:hidden block md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-300"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-sans font-medium border border-orange-100 rounded-lg bg-orange-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-orange-600">
+            <li>
+              <a href="index.html" class="block py-2 px-3 text-orange-900 rounded-sm hover:bg-orange-100 md:hover:bg-transparent md:hover:text-white md:p-0" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 px-3 text-orange-900 rounded-sm hover:bg-orange-100 md:hover:bg-transparent md:hover:text-white md:p-0">About</a>
+            </li>
+            <li>
+              <a href="menu.html" class="block py-2 px-3 text-white bg-orange-700 rounded-sm md:bg-transparent md:text-white md:p-0">Menu</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="block py-2 px-3 text-orange-900 rounded-sm hover:bg-orange-100 md:hover:bg-transparent md:hover:text-white md:p-0">Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="block py-2 px-3 text-orange-900 rounded-sm hover:bg-orange-100 md:hover:bg-transparent md:hover:text-white md:p-0">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-20 pb-10 container mx-auto max-w-5xl px-6 flex-grow flex flex-col">
+      <div class="text-center py-6 md:py-12">
+        <h2 class="text-3xl font-semibold text-gray-800">Daftar Menu</h2>
+      </div>
+
+      <!-- Category Buttons -->
+      <div id="categoryButtons" class="flex space-x-4 overflow-x-auto border-b border-gray-300 pb-3 mb-6">
+        <button type="button" class="category-btn whitespace-nowrap px-4 py-2 rounded-lg font-semibold bg-red-500 text-white shadow-lg">Semua</button>
+        <button type="button" class="category-btn whitespace-nowrap px-4 py-2 rounded-lg font-semibold bg-red-100 text-red-700 hover:bg-red-200">Nasi Box</button>
+        <button type="button" class="category-btn whitespace-nowrap px-4 py-2 rounded-lg font-semibold bg-red-100 text-red-700 hover:bg-red-200">Ayam</button>
+        <button type="button" class="category-btn whitespace-nowrap px-4 py-2 rounded-lg font-semibold bg-red-100 text-red-700 hover:bg-red-200">Sayuran</button>
+        <button type="button" class="category-btn whitespace-nowrap px-4 py-2 rounded-lg font-semibold bg-red-100 text-red-700 hover:bg-red-200">Lainnya</button>
+      </div>
+
+      <!-- Menus Container -->
+      <section id="menusContainer" class="flex flex-col space-y-6">
+        <!-- Semua Category -->
+        <div class="menu-category" data-category="Semua">
+          <!-- Combine all menus from all categories here -->
+          <!-- Nasi Box -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Nasi Box Komplit</h3>
+              <span class="text-red-500 font-bold">Rp 25.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Nasi putih, ayam goreng, tempe, sambal, lalapan</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Ayam goreng crispy</li>
+              <li class="text-sm">Tempe goreng gurih</li>
+              <li class="text-sm">Sambal terasi pedas</li>
+              <li class="text-sm">Lalapan segar (selada, timun, tomat)</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Nasi Uduk Special</h3>
+              <span class="text-red-500 font-bold">Rp 30.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Nasi uduk, telur balado, ayam suwir, sambal</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Telur balado pedas</li>
+              <li class="text-sm">Ayam suwir bumbu kuning</li>
+              <li class="text-sm">Sambal ulek khas</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+
+          <!-- Ayam -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Ayam Bakar Taliwang</h3>
+              <span class="text-red-500 font-bold">Rp 40.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Ayam bakar pedas khas Lombok, nasi putih, sambal</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Ayam bakar dengan sambal taliwang</li>
+              <li class="text-sm">Nasi putih hangat</li>
+              <li class="text-sm">Lalapan segar</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Sate Ayam Madura</h3>
+              <span class="text-red-500 font-bold">Rp 35.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sate ayam dengan bumbu kacang manis, nasi putih</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Sate ayam Madura juicy</li>
+              <li class="text-sm">Bumbu kacang manis kental</li>
+              <li class="text-sm">Nasi putih</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+
+          <!-- Sayuran -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Gado-Gado Segar</h3>
+              <span class="text-red-500 font-bold">Rp 20.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sayuran segar, telur rebus, bumbu kacang, kerupuk</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Kangkung segar</li>
+              <li class="text-sm">Kol, tauge, kentang rebus</li>
+              <li class="text-sm">Telur rebus</li>
+              <li class="text-sm">Bumbu kacang kacang tanah alami</li>
+              <li class="text-sm">Kerupuk udang</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Sayur Lodeh Tradisional</h3>
+              <span class="text-red-500 font-bold">Rp 18.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sayur lodeh dengan santan dan sayuran segar</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Lodeh dengan santan kental</li>
+              <li class="text-sm">Labu siam, kacang panjang, terong</li>
+              <li class="text-sm">Tahu putih dan tempe</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+
+          <!-- Lainnya -->
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Pecel Lele Goreng</h3>
+              <span class="text-red-500 font-bold">Rp 28.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Lele goreng renyah, sambal terasi, lalapan</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Lele goreng crispy</li>
+              <li class="text-sm">Sambal terasi segar</li>
+              <li class="text-sm">Lalapan timun, kemangi</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Perkedel Jagung</h3>
+              <span class="text-red-500 font-bold">Rp 15.000/pcs</span>
+            </div>
+            <p class="text-gray-700 text-sm">Perkedel jagung manis lumer di mulut</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Jagung manis</li>
+              <li class="text-sm">Kentang halus</li>
+              <li class="text-sm">Bumbu rempah rahasia</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nasi Box Category -->
+        <div class="menu-category hidden" data-category="Nasi Box">
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Nasi Box Komplit</h3>
+              <span class="text-red-500 font-bold">Rp 25.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Nasi putih, ayam goreng, tempe, sambal, lalapan</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Ayam goreng crispy</li>
+              <li class="text-sm">Tempe goreng gurih</li>
+              <li class="text-sm">Sambal terasi pedas</li>
+              <li class="text-sm">Lalapan segar (selada, timun, tomat)</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Nasi Uduk Special</h3>
+              <span class="text-red-500 font-bold">Rp 30.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Nasi uduk, telur balado, ayam suwir, sambal</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Telur balado pedas</li>
+              <li class="text-sm">Ayam suwir bumbu kuning</li>
+              <li class="text-sm">Sambal ulek khas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ayam Category -->
+        <div class="menu-category hidden" data-category="Ayam">
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Ayam Bakar Taliwang</h3>
+              <span class="text-red-500 font-bold">Rp 40.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Ayam bakar pedas khas Lombok, nasi putih, sambal</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Ayam bakar dengan sambal taliwang</li>
+              <li class="text-sm">Nasi putih hangat</li>
+              <li class="text-sm">Lalapan segar</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Sate Ayam Madura</h3>
+              <span class="text-red-500 font-bold">Rp 35.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sate ayam dengan bumbu kacang manis, nasi putih</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Sate ayam Madura juicy</li>
+              <li class="text-sm">Bumbu kacang manis kental</li>
+              <li class="text-sm">Nasi putih</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sayuran Category -->
+        <div class="menu-category hidden" data-category="Sayuran">
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Gado-Gado Segar</h3>
+              <span class="text-red-500 font-bold">Rp 20.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sayuran segar, telur rebus, bumbu kacang, kerupuk</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Kangkung segar</li>
+              <li class="text-sm">Kol, tauge, kentang rebus</li>
+              <li class="text-sm">Telur rebus</li>
+              <li class="text-sm">Bumbu kacang kacang tanah alami</li>
+              <li class="text-sm">Kerupuk udang</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Sayur Lodeh Tradisional</h3>
+              <span class="text-red-500 font-bold">Rp 18.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Sayur lodeh dengan santan dan sayuran segar</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Lodeh dengan santan kental</li>
+              <li class="text-sm">Labu siam, kacang panjang, terong</li>
+              <li class="text-sm">Tahu putih dan tempe</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lainnya Category -->
+        <div class="menu-category hidden" data-category="Lainnya">
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Pecel Lele Goreng</h3>
+              <span class="text-red-500 font-bold">Rp 28.000/box</span>
+            </div>
+            <p class="text-gray-700 text-sm">Lele goreng renyah, sambal terasi, lalapan</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Lele goreng crispy</li>
+              <li class="text-sm">Sambal terasi segar</li>
+              <li class="text-sm">Lalapan timun, kemangi</li>
+            </ul>
+          </div>
+          <hr class="border-gray-300 my-4" />
+          <div class="space-y-1">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-red-600">Perkedel Jagung</h3>
+              <span class="text-red-500 font-bold">Rp 15.000/pcs</span>
+            </div>
+            <p class="text-gray-700 text-sm">Perkedel jagung manis lumer di mulut</p>
+            <ul class="list-disc list-inside text-gray-700 pl-4 sm:pl-6">
+              <li class="text-sm">Jagung manis</li>
+              <li class="text-sm">Kentang halus</li>
+              <li class="text-sm">Bumbu rempah rahasia</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-orange-600 text-white py-6 text-center text-sm select-none">&copy; 2024 Catering X. Semua hak cipta dilindungi.</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
